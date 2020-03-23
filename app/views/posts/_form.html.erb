@@ -4,7 +4,7 @@
   <%= f.label :content %>
   <%= f.text_area :content %> -->
   <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
-  <%= f.fields_for :categories do |categories_for| %>
+  <%= f.fields_for :categories do |categories_form| %>
       <%= categories_form.label :name %>
       <%= categories_form.text_field :name %>
   <% end %>
