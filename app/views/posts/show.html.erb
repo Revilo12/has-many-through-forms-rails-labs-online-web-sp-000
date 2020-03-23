@@ -6,7 +6,7 @@
 <%= @post.comments.each do |comment| %>
   <%= comment.content if !!comment.content %><br \>
 <% end %>
-<%= @post.users.unique.each do |user| %>
+<%= @post.users.uniq.each do |user| %>
   <%= link_to user.username, user %><br>
 <%end%>
 <%= form_for @post do |f| %>
