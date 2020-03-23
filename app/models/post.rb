@@ -15,7 +15,7 @@ class Post < ActiveRecord::Base
 
   def categories_attributes=(categories_attributes)
     categories_attributes.each do |category_attribute|
-      #test
+      binding.pry
     end
   end
 
