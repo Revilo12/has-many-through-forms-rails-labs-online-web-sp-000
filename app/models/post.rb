@@ -17,5 +17,11 @@ class Post < ActiveRecord::Base
      self.category = Category.find_or_create_by(name: name)
   end
 
+  def categories_attributes=(categories_attributes)
+    categories_attributes.each do |category_attribute|
+      #test
+    end
+  end
+
 
 end
