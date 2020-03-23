@@ -1,3 +1,4 @@
+<%= @post.title %><br>
 <%= @post.content %><br>
 <%= form_for @post do |f| %>
   <%= f.fields_for :comments do |comment_builder| %>
