@@ -4,8 +4,6 @@ class Post < ActiveRecord::Base
   has_many :comments
   has_many :users, through: :comments
   accepts_nested_attributes_for :comments, :categories
-    attributed['content'].blank?
-  end
 
   def reject_category(attributed)
     attributed['name'].blank?
