@@ -11,6 +11,7 @@
 <%end%>
 <%= form_for @post do |f| %>
   <%= f.fields_for :comments do |comment_builder| %>
+    <%= collection_select :user, User.all, :id, :name
     <%= comment_builder.text_field :content %>
   <% end %>
   <%= f.submit %>
