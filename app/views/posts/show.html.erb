@@ -11,10 +11,10 @@
 <%end%>
 <%= form_for @post.comments.build do |f| %>
   <%= f.collection_select :user_id, User.all, :id, :username %>
-  <!-- <%= f.fields_for :user, User.new do |users_builder| %>
+  <%= f.fields_for :user, User.new do |users_builder| %>
     <% users_builder.label :username %>
     <% users_builder.text_field :username %>
-  <% end %> -->
+  <% end %>
   <%= f.label :content, "Content" %>
   <%= f.text_area :content %>
   <%= f.hidden_field :post_id %>
