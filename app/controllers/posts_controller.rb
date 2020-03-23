@@ -1,9 +1,6 @@
 class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
-    1.times do
-      @post.comments.build
-    end
   end
 
   def index
