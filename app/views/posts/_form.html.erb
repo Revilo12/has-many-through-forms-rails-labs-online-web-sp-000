@@ -5,7 +5,6 @@
   <%= f.text_area :content %>
   <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
   <%= f.fields_for :categories do |category_builder| %>
-    <% binding.pry %>
     <%= category_builder.label :name %>
     <%= category_builder.text_field :name %>
   <% end %>
