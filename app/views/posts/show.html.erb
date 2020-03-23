@@ -4,9 +4,8 @@
   <%= category.name %><br>
 <% end %>
 <%= @post.comments.each do |comment| %>
-  <%= binding.pry %>
-  <%= comment.user.username %><br>
-  <%= comment.content %><br \>
+  <%= comment.user.username if !!comment.user %><br>
+  <%= comment.content if !!comment.content %><br \>
 <% end %>
 <%= form_for @post do |f| %>
   <%= f.fields_for :comments do |comment_builder| %>
