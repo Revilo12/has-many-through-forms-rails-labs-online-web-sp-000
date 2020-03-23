@@ -4,10 +4,9 @@
   <%= f.label :content %>
   <%= f.text_area :content %> -->
   <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
-  <!-- <%= f.fields_for :categories do |categories_form| %>
-      <%= categories_form.label :name %>
-      <%= categories_form.text_field :name %>
-  <% end %> -->
-  <input type="text" id="post_categories_attributes_0_name" name="post[categories_attributes][][:name]">
+  <%= f.fields_for :categories, post.categories.build do |categories_fields| %>
+    <%= categories_fields.label :name, "Category" %>
+    <%= categories_fields.text_field :name %>
+  <% end %>
   <%= f.submit %>
 <% end %>
