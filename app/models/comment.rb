@@ -3,9 +3,9 @@ class Comment < ActiveRecord::Base
   belongs_to :post
   accepts_nested_attributes_for :user
 
-  def comment_user_attributes=(comment_user_attribute)
-    if !comment_user_attribute[:username].blank?
-      user = User.find_or_create_by(username: comment_user_attribute[:username])
+  def user_attributes=(user_attribute)
+    if !user_attribute[:username].blank?
+      user = User.find_or_create_by(username: user_attribute[:username])
       comment.user= user
       comment.save
     end
