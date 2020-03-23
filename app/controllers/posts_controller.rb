@@ -12,9 +12,9 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    2.times do
-      @post.categories.build
-    end
+    # 2.times do
+    #   @post.categories.build
+    # end
   end
 
   def create
