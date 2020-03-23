@@ -8,5 +8,7 @@
     <%= categories_fields.label :name, "Category" %>
     <%= categories_fields.text_field :name %>
   <% end %>
+  <%= f.label :content, "Content" %>
+  <%= f.text_area :content %>
   <%= f.submit %>
 <% end %>
