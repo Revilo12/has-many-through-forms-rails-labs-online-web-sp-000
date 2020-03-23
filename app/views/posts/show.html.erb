@@ -3,6 +3,10 @@
 <%= @post.categories.each do |category| %>
   <%= category.name %><br>
 <% end %>
+<%= @post.comments.each do |comment| %>
+  <%= comment.user.username %><br>
+  <%= comment.content %><br />
+<% end %>
 <%= form_for @post do |f| %>
   <%= f.fields_for :comments do |comment_builder| %>
     <%= comment_builder.text_field :content %>
