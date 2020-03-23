@@ -4,7 +4,7 @@
   <%= category.name %><br>
 <% end %>
 <%= @post.comments.each do |comment| %>
-  binding.pry
+  <% binding.pry %>
   <%= comment.user.username %> says: <%= comment.content %>
 <% end %>
 <%= @post.users.uniq.each do |user| %>
