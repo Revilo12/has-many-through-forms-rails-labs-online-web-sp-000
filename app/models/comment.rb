@@ -7,6 +7,7 @@ class Comment < ActiveRecord::Base
     if !comment_user_attribute[:username].blank?
       user = User.find_or_create_by(username: comment_user_attribute[:username])
       comment.user= user
+      comment.save
     end
   end
 end
