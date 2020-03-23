@@ -1,1 +1,3 @@
-
+<% @user.posts.distinct do |post| %>
+  <% link_to post.title, post %>
+<% end %>
