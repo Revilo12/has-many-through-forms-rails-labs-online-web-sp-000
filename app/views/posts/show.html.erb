@@ -4,7 +4,7 @@
   <%= category.name %><br>
 <% end %>
 <%= @post.comments.each do |comment| %>
-  <%= comment.user.username if !!comment.user %><br>
+  <%= link_to comment.user.username, comment.user if !!comment.user %><br>
   <%= comment.content if !!comment.content %><br \>
 <% end %>
 <%= form_for @post do |f| %>
